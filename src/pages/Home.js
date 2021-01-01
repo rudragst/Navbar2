@@ -1,9 +1,98 @@
 import React from 'react';
+import TextField from "@material-ui/core/TextField";
+import Input from "@material-ui/core/Input";
+import { makeStyles } from '@material-ui/core/styles';
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    '& .MuiTextField-root': {
+      margin: theme.spacing(1),
+      width: '25ch',
+    },
+  },
+}));
 
 function Home() {
   return (
     <div className='home'>
-      <h1>Home</h1>
+      <form noValidate autoComplete="off">
+      {/* <TextField required id="standard-required" label="Required" defaultValue="User name" />
+      <TextField required id="standard-required" label="Required" defaultValue="Surname" />
+      <TextField required id="standard-required" label="Required" defaultValue="Last name" /> */}
+      <TextField
+          id="outlined-full-width"
+          label="Label"
+          style={{ margin: 6 }}
+          placeholder="Name"
+          // helperText="Full width!"
+          fullWidth
+          margin="normal"
+          variant="outlined"
+          InputLabelProps={{
+            shrink: true,
+          }}
+          
+        />
+        <TextField
+          id="outlined-full-width"
+          label="Surname"
+          style={{ margin: 6 }}
+          fullWidth
+          margin="normal"
+          variant="outlined"
+          InputLabelProps={{
+            shrink: true,
+          }}  
+        />
+        <TextField
+          id="outlined-full-width"
+          label="Last name"
+          style={{ margin: 6 }}       
+          fullWidth
+          margin="normal"
+          variant="outlined"
+          InputLabelProps={{
+            shrink: true,
+          }}  
+        />
+        <TextField
+          id="outlined-full-width"
+          label="Mobile No"
+          style={{ margin: 6 }}       
+          fullWidth
+          margin="normal"
+          variant="outlined"
+          InputLabelProps={{
+            shrink: true,
+          }}  
+        />
+        <TextField
+          id="outlined-full-width"
+          label="Adhar Number"
+          style={{ margin: 6 }}       
+          fullWidth
+          margin="normal"
+          variant="outlined"
+          InputLabelProps={{
+            shrink: true,
+          }}  
+        />
+                <TextField
+          id="outlined-full-width"
+          label="Email Address"
+          style={{ margin: 6 }}       
+          fullWidth
+          margin="normal"
+          variant="outlined"
+          InputLabelProps={{
+            shrink: true,
+          }}  
+        />
+   
+          {/* <Input
+            
+          /> */}
+      </form>
     </div>
   );
 }
