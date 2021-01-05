@@ -3,104 +3,31 @@ import Button from "@material-ui/core/Button";
 import TextField from "@material-ui/core/TextField";
 import Input from "@material-ui/core/Input";
 import { makeStyles } from '@material-ui/core/styles';
+import SearchBar from "material-ui-search-bar";
+
 
 const useStyles = makeStyles((theme) => ({
   root: {
     '& .MuiTextField-root': {
       margin: theme.spacing(1),
-      width: '25ch',
+      // width: '25ch',
     },
   },
 }));
 
 function Home() {
-  return (
-    <div className='home'>
-      <form noValidate autoComplete="off">
-      {/* <TextField required id="standard-required" label="Required" defaultValue="User name" />
-      <TextField required id="standard-required" label="Required" defaultValue="Surname" />
-      <TextField required id="standard-required" label="Required" defaultValue="Last name" /> */}
-      <h2>Student Registration</h2>
-      <TextField
-          id="outlined-full-width"
-          label="Label"
-          style={{ margin: 6 }}
-          placeholder="Name"
-          // helperText="Full width!"
-          fullWidth
-          margin="normal"
-          variant="outlined"
-          InputLabelProps={{
-            shrink: true,
-          }}
-          
-        />
-        <TextField
-          id="outlined-full-width"
-          label="Surname"
-          style={{ margin: 6 }}
-          fullWidth
-          margin="normal"
-          variant="outlined"
-          InputLabelProps={{
-            shrink: true,
-          }}  
-        />
-        <TextField
-          id="outlined-full-width"
-          label="Last name"
-          style={{ margin: 6 }}       
-          fullWidth
-          margin="normal"
-          variant="outlined"
-          InputLabelProps={{
-            shrink: true,
-          }}  
-        />
-        <TextField
-          id="outlined-full-width"
-          label="Mobile No"
-          style={{ margin: 6 }}       
-          fullWidth
-          margin="normal"
-          variant="outlined"
-          InputLabelProps={{
-            shrink: true,
-          }}  
-        />
-        <TextField
-          id="outlined-full-width"
-          label="Adhar Number"
-          style={{ margin: 6 }}       
-          fullWidth
-          margin="normal"
-          variant="outlined"
-          InputLabelProps={{
-            shrink: true,
-          }}  
-        />
-                <TextField
-          id="outlined-full-width"
-          label="Email Address"
-          style={{ margin: 6 }}       
-          fullWidth
-          margin="normal"
-          variant="outlined"
-          InputLabelProps={{
-            shrink: true,
-          }}  
-        />
+  return(
+    <SearchBar
+    // value={this.state.value}
+    // onChange={(newValue) => this.setState({ value: newValue })}
+    // onRequestSearch={() => doSomethingWith(this.state.value)}
+  />
+  //   <div className='products'>
+  //     <h1>RUDRAM Services</h1>
 
-          {/* <Input
-            
-          /> */}
-        <button type="submit" >Submit</button>
-        <button type="button"  >
-          Clear Values
-        </button>
-      </form>
-    </div>
-  );
+  //   </div>
+  // )
+  )
 }
 
 export default Home;
